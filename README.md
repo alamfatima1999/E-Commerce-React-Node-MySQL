@@ -25,9 +25,9 @@ Installation
 
 Deployed on Netlify & Render..  
 
-TO_DO
+[APP LINK](https://ecommerce-fatima.netlify.app/)
 
-Please Note: Application will take some time to boot up 
+Please Note: Application will take some time to boot up or may be DB is not working. Reach me out on alamfatima1999@gmail.com
 
 ### Clone the repository:
 
