@@ -25,8 +25,8 @@ Installation
 
 Deployed on Netlify & Render..  
 
-[APP LINK 1] (https://ecommerce-fatima.netlify.app/)
-[APP LINK 2] (https://ecommerce-react-mysql.netlify.app/) -- updated code with additional features
+[APP LINK 1](https://ecommerce-fatima.netlify.app/)
+[APP LINK 2](https://ecommerce-react-mysql.netlify.app/) -- updated code with additional features
 
 Please Note: Application will take some time to boot up or may be DB is not working. Reach me out on alamfatima1999@gmail.com
 
