@@ -72,6 +72,7 @@ If facing any issue with DB connection check connection.js for configuration
 ### Application Screens
 
 Login Page
+
 <img width="334" alt="Login Page" src="https://github.com/alamfatima1999/E-Commerce-React-Node-MySQL/assets/71816449/a8f1037c-6a53-4470-a9cc-62cfe867d7cf">
 
 
