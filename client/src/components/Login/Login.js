@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.scss";
 import { getBaseURL } from "../apiConfig";
-import TokenRefresher from "../Utils/token"; 
 
 function Login(props) {
   let [uname, setUname] = useState("");
@@ -27,9 +26,6 @@ function Login(props) {
             const user = res.data[0].isAdmin;
             sessionStorage.setItem("customerId", res.data[0].userId);
             sessionStorage.setItem("isAdmin", user ? true : false);
-            sessionStorage.setItem("jwt_token", res.data[0].token);
-            sessionStorage.setItem("jwt_refresh_token", res.data[0].refreshToken);
-            TokenRefresher(res.data[0].refreshToken);
             props.setUserAuthenticatedStatus(user ? true : false, res.data[0].userId);
           } else {
             console.log("User not available");

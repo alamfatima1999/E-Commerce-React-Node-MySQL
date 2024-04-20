@@ -2,7 +2,6 @@
 
 const pool = require("../database/connection");
 const bcrypt = require('bcryptjs');
-const { generateAccessAndRefreshToken, refreshToken } = require('../utils/token'); 
 
 
 exports.register = (email, password, isAdmin, fname, lname) => {
@@ -75,17 +74,6 @@ exports.login = (email, password) => {
                                     userId: result[0].userId,
                                     isAdmin: result[0].isAdmin,
                                 }
-                                const {token, refreshToken} = generateAccessAndRefreshToken(userData);
-                                userData.token = token;
-                                // if refresh token gives cros error avoid passing refresh token in cookies & pass as nrml param
-                                userData.refreshToken = refreshToken;
-
-                                // res.cookie('jwt', refreshToken, {
-                                //     httpOnly: true,
-                                //     sameSite: 'None', secure: true,
-                                //     maxAge: 24 * 60 * 60 * 1000
-                                // });
-
                                 let response = [userData]
                                 resolve(response);
                             }
