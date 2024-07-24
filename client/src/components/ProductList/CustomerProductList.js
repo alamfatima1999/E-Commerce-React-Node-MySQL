@@ -89,27 +89,12 @@ const ProductListCustomer = (props) => {
     setProductList(updatedList);
   };
   const buyProducts = () => {
-    // Retrieve JWT token from session storage
-    const token = sessionStorage.getItem('jwt_token');
 
-    if (!token) {
-      // Handle case where token is not available
-      alert("Authorization token is missing");
-      return;
-    }
-
+    
     if (address !== "") {
       let customerPayload = { address };
-
-      // Include JWT token in the headers
-      const config = {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      };
-
       axios
-        .post(`${getBaseURL()}api/cart/buy/${customerId}`, { ...customerPayload }, config)
+        .post(`${getBaseURL()}api/cart/buy/${customerId}`, { ...customerPayload })
         .then((res) => {
           setCartProducts([]);
           setAddress("");
